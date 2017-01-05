@@ -8,7 +8,7 @@ socket.on('message',function(message){
 	var momenttimestamp=moment.utc(message.timestamp);
 	console.log(message.text);
 	// class u start with period
-	jQuery('.messages').append('<p><strong>'+momenttimestamp.format("h:mm a")+'</strong>'+message.text+'</p>')
+	jQuery('.messages').append('<p><strong>'+momenttimestamp.local().format("h:mm a")+'</strong>'+message.text+'</p>')
 });
 
 
