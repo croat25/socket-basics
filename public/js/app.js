@@ -6,6 +6,8 @@ socket.on('connect',function(){
 socket.on('message',function(message){
 	console.log('New message:');
 	console.log(message.text);
+	// class u start with period
+	jQuery('.messages').append('<p>'+message.text+'</p>')
 });
 
 
